@@ -1,0 +1,147 @@
+@import 'client/styles/iframe/iframe.scss';
+
+.modelSelect {
+  width: 47%;
+}
+
+.modelThumbnail {
+  border-radius: 5%;
+  border: 3px solid transparent;
+  transition-duration: 0.1s;
+  
+  &:focus  {
+    outline: none !important;
+    box-shadow: none;
+  }
+
+  &.activeModel {
+    border: 3px solid var(--primary);
+
+    &:hover {
+      border: 3px solid var(--primary);
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    border: 3px solid lightgrey;
+  }
+
+  img {
+    border-radius: 5%;
+    overflow: hidden;
+    width: 100%;
+    height: auto; 
+  }
+}
+
+.chosenModel {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  height: 510px;
+  overflow: hidden;
+}
+
+.fullModel {
+  height: 510px;
+  width: 100%;
+  overflow: hidden;
+  img {
+    // centering
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    // size    
+    height: 100%;
+    width: auto;
+    // underlay the measurements
+    z-index: -1;
+  }
+}
+
+.makeMyModelBtn {
+  padding: 20px 30px;
+  position: relative;
+  bottom: 10px;
+}
+
+.heightWeight {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+
+
+}
+.measurementsButton {
+  border: 0;
+  width: 40px;
+  height: 40px; 
+  border-radius: 50%;
+  background-color: var(--secondary);
+  display: flex;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  outline: none;
+  
+  &.measurementsOn {
+    background-color: var(--primary);
+  }
+  &:focus  {
+    outline: none !important;
+    box-shadow: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    width: 20px;
+    margin: auto;
+  }
+
+  svg, svg path {
+    fill: white;
+  }
+}
+
+.displayMeasurements {
+  transition: 0.3s;
+  .rightMeasurements {
+    position: absolute;
+    right: 10%; 
+    top: 80px;
+    transition: 0.3s;
+  }
+  
+  .leftMeasurements {
+    position: absolute;
+    left: 8%; 
+    top: 125px;
+    transition: 0.3s;
+  }
+
+  &.hideMeasurements {
+    .rightMeasurements {
+      opacity: 0;
+      right: 15px; 
+      top: 0px;
+      z-index: -1;
+      
+    }
+    .leftMeasurements {
+      opacity: 0;
+      left: 250px; 
+      top: 0px;
+      z-index: -1;
+    }
+
+  }
+}
+.measurementCard {
+  width: 66px; 
+  background-color: #252525;
+  border-radius: 5px;  
+}

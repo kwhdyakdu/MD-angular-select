@@ -1,0 +1,63 @@
+@mixin dm-font {
+  font-family: 'DM Sans', sans-serif;
+}
+
+@mixin breakpoint-content-max-width {
+  @media screen and (max-width: $content-max-width) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-xl {
+  @media screen and (max-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-lg {
+  @media screen and (max-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-md {
+  @media screen and (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-sm {
+  @media screen and (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-xs {
+  @media screen and (max-width: $breakpoint-xs) {
+    @content;
+  }
+}
+
+@mixin breakpoint-column-collapse {
+  @media screen and (max-width: $breakpoint-column-collapse) {
+    @content;
+  }
+}
+
+@mixin breakpoint-content-max-width-width-padding {
+  @media screen and (max-width: $content-max-width-width-padding) {
+    @content;
+  }
+}
+
+// Animations
+@mixin animation($name) {
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

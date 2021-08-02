@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: modamatch
+spec:
+  rules:
+    - host: staging-modamatch.qmo.io
+      http:
+        paths:
+          - backend:
+              serviceName: staging-modamatch
+              servicePort: 80

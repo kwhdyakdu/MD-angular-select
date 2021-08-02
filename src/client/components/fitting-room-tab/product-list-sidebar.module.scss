@@ -1,0 +1,40 @@
+@import 'client/styles/iframe/iframe.scss';
+
+.productCard {
+  height: 108px;
+
+  .productImage {
+    background-size: contain;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+  }
+
+  &.active {
+    border-color: var(--primary);
+  }
+
+  &.active::after {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -12px;
+    right: -12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+
+    background: var(--primary);
+    color: white;
+    content: '✓'
+  }
+}

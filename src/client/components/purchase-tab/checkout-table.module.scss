@@ -1,0 +1,51 @@
+@import 'client/styles/iframe/iframe.scss';
+
+.tableContainer {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  padding: 20px 40px !important;
+  max-height: 450px;
+  margin-top: 20px;
+}
+
+.rowHeader {
+  padding-bottom: 15px;
+  h3 {
+    color: black;  
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+}
+
+.itemRow {
+  border-top: 1px solid #828282;
+  padding: 25px 0;
+}
+
+.productImage {
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.removeItem {
+  background: none;
+  outline: none;
+  border: none;
+  color: var(--primary);
+  position: absolute;
+  right: 30px;
+  margin-top: -2px;
+}
+
+.removeItemTooltip {
+  height: 29px;
+}
+
+.qtyInput {
+  width: 40px;
+  font-size: 14px;
+}

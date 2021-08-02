@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: modamatch
+  labels:
+    app: modamatch
+    tier: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: modamatch
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: modamatch
+        tier: frontend
+    spec:
+      containers:
+        - name: modamatch
+          image: ghcr.io/quantummob/modamatch:latest
+          env:
+            - name: GET_HOSTS_FROM
+              value: 'dns'
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: regcred

@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "client/*": ["./client/*"],
+      "pages/*": ["./pages/*"],
+      "server/*": ["./server/*"],
+      "types/*": ["./types/*"],
+      "utils/*": ["./utils/*"],
+    },
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "types": [
+    "node",
+    "webpack",
+    "react",
+    "react-dom"
+  ],
+  "exclude": [
+    "node_modules",
+    "wordpress"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.js",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js"
+  ],
+  "compileOnSave": true
+}

@@ -1,0 +1,12 @@
+namePrefix: staging-
+commonLabels:
+  environment: staging
+bases:
+  - ../../base
+patches:
+  - deployment.yaml
+resources:
+  - ingress.yaml
+configMapGenerator:
+  - name: env-config
+    env: .env

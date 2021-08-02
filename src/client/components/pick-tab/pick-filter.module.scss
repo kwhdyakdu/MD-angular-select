@@ -1,0 +1,24 @@
+@import 'client/styles/iframe/iframe.scss';
+
+.button {
+  background-color: transparent;
+  border-color: transparent;
+  color: #252525;
+  outline: none;
+  margin: 5px 0;
+  padding: 10px !important;
+  
+  &:hover, &:focus, &.active {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    .h3 {
+      color: white; 
+    }
+  }
+}
+
+.hr {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0 0;
+}

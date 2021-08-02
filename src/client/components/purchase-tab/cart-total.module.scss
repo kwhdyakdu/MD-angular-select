@@ -1,0 +1,48 @@
+@import 'client/styles/iframe/iframe.scss';
+
+.h3 {
+  padding: 20px 0;
+  padding-left: 10px;
+  color: black;
+  font-size: 12px;
+}
+
+.border {
+  width: 90%;
+  margin: auto;
+  color: #828282;
+}
+
+.totalWrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid #828282;
+  position: relative;
+}
+
+.button {
+  width: 85%;
+  margin: 0 auto;
+  font-size: 13px;
+  max-width: 200px;
+  margin-bottom: 2px;
+  padding-bottom: 10px !important;
+}
+
+.errorAlert {
+  font-size: 10px;
+  width: 95%;
+  margin-left: 10px;
+  position: absolute;
+  bottom: 35px;
+  p  {
+    margin-bottom: 0;
+  }
+}
+.spinnerBorder {
+  width: 17px;
+  height: 17px;
+}

@@ -1,0 +1,138 @@
+@import 'client/styles/iframe/iframe.scss';
+
+.feedbackContainer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 205px;
+  right: 20px;
+  bottom: 10px;
+  z-index: 1020;
+}
+.cardContainer {
+  padding: 8px;
+  position: absolute !important;
+  right: 25px;
+  bottom: 40px;
+  width: 100%;
+  // z-index: 800;
+}
+
+.hidePopup{
+  display: none !important;
+}
+
+.textArea {
+  position: relative;
+  textarea, input[type=text] {
+    font-size: 12px;
+    padding: 6px;
+  }
+  .formError {
+    position: absolute;
+    font-size: 10px;
+    top: -17px;
+  }
+}
+
+.feedbackButton {
+  width: 45px;
+  height: 45px;
+  margin-left: auto;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  justify-content: center;
+  outline: none;
+  border: 0;
+  transition: 0.1s linear;
+  z-index: 900;
+  &:hover {
+    width: 47px;
+    height: 47px;
+    transform: translate(2px, 2px)
+  }
+  &:focus {
+    outline: none;
+  }
+  p {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    margin: auto;
+    position: relative;
+    bottom: 2px;
+  }
+}
+
+.feedbackButtonTooltip {
+  height: 29px;
+}
+
+.emojiRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 15px !important;
+  .emoji {
+    font-size: 12px;
+    vertical-align: middle;
+    line-height: 2;
+    width: 25px; 
+    height: 25px;
+    border-radius: 50%; 
+    text-align: center; 
+    padding: 0;
+    transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    &:hover {
+      cursor: pointer;
+      background: var(--primary); 
+    }
+    &.checkedEmoji {
+      background: var(--primary); 
+    }
+  }
+}
+
+
+.formCheck {
+  padding: 0 !important;
+
+  input[type=radio] {
+    display: none;    
+  }
+}
+
+.submitButton {
+  background-color: transparent;
+  color: var(--primary);
+  border: none;
+  letter-spacing: 0.5px;
+  padding: 6px 0;
+  text-align: center;
+  // border: 1px solid transparent;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  &:hover{
+    background-color: var(--primary);
+    color: white;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.spinnerBorder {
+  width: 17px !important;
+  height: 17px !important;
+}
+
+.takeSurveyLink {
+  color: #007bff !important;
+  text-align: center;
+  font-size: 12px;
+  margin: 5px;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,9 @@
+@import 'client/styles/iframe/iframe.scss';
+
+.sortByFilter {
+  border: 0;
+  background: $light;
+  @include dm-font;
+  color: $dark;
+  font-size: 14px;
+}

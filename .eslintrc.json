@@ -1,0 +1,144 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:prettier/recommended",
+    "prettier/react"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "import",
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "@typescript-eslint/semi": [
+      "error",
+      "never"
+    ],
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": ["error", "never"],
+    "no-warning-comments": "warn",
+    // we are not using propTypes
+    "react/prop-types": "off",
+    // check is incompatible with nextjs Link component
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [
+          "Link"
+        ],
+        "specialLink": [
+          "hrefLeft",
+          "hrefRight"
+        ],
+        "aspects": [
+          "invalidHref",
+          "preferButton"
+        ]
+      }
+    ],
+    // nextjs has react as a global import
+    "react/react-in-jsx-scope": "off",
+    // causes error with date-fns
+    "import/no-duplicates": [
+      "off"
+    ],
+    // it's common for bootstrap to only use htmlFor for labels
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelComponents": [],
+        "labelAttributes": [],
+        "controlComponents": [],
+        "depth": 25
+      }
+    ],
+    // allow `variable && functionCall()`
+    "@typescript-eslint/no-unused-expressions": [
+      "off"
+    ],
+    // sometimes its good to have unused vars in callbacks for context
+    // note you must synchronize with the eslint base rule as it can report incorrect errors
+    "no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "warn"
+    ],
+    // too much work
+    "react/jsx-props-no-spreading": [
+      "off"
+    ],
+    "no-restricted-syntax": [
+      "off"
+    ],
+    "no-await-in-loop": [
+      "off"
+    ],
+    "@typescript-eslint/no-use-before-define": [
+      "off"
+    ],
+    "import/no-cycle": [
+      "off"
+    ],
+    "no-param-reassign": [
+      "off"
+    ],
+    "no-async-promise-executor": [
+      "off"
+    ],
+    "no-alert": [
+      "off"
+    ],
+    "no-continue": [
+      "off"
+    ],
+    "import/prefer-default-export": [
+      "off"
+    ],
+    // some console functions are expected
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "error",
+          "info"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-throw-literal": [
+      "off"
+    ],
+    "@typescript-eslint/naming-convention": ["off"],
+    "@typescript-eslint/indent": ["off"],
+    "no-underscore-dangle": ["off"]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": [
+    "src/server/migrations/*.ts",
+    "wordpress",
+    "public",
+    ".next",
+    "dist"
+  ]
+}

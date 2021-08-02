@@ -1,0 +1,51 @@
+@import 'client/styles/iframe/iframe.scss';
+
+.productCard {
+  height: 210px;
+
+  .productImage {
+    background-size: contain;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: calc(100% - 50px);
+    width: calc(100% - 20px);
+  }
+}
+
+
+.tryOnBtn {
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border-radius: 100% !important;
+  margin: 12px;
+  padding: 0 !important;
+
+  svg, svg path {
+    fill: var(--primary);
+  }
+
+  &.active, &:hover {
+    svg, svg path {
+      fill: white;
+    }
+  }
+}
+
+.tryOnBtnTooltip {
+  height: 29px;
+
+  > div:global(.arrow):before {
+    border-right-color: #828282;
+  }
+
+  > div:global(.tooltip-inner) {
+    background-color: #828282;
+  }
+}

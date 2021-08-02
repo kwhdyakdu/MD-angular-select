@@ -1,0 +1,8 @@
+{
+  "@quantummob/generator-app": {
+    "name": "modamatch",
+    "type": "nextjs",
+    "features": [],
+    "projectMobId": "d7b4ef50-aba5-4f05-b2ab-d3a2ddccaa19"
+  }
+}

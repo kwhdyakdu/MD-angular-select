@@ -1,0 +1,200 @@
+@import 'client/styles/iframe/iframe.scss';
+/* 
+-----------------------
+  Navigation - 'Pick/Fitting Room/ Purchase'
+----------------------- 
+*/
+.navigationContainer {
+  padding-top: 15px;
+  // padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-top: 1px solid #c7c7c7;
+
+  .navigation {
+    width: 100%;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+  }
+
+  div {
+    padding: 0;
+  }
+
+  hr {
+    height: 1px;
+    background-color: var(--secondary);
+    margin: 0;
+  }
+}
+
+
+.tab {
+  height: 60px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 24px;
+    margin: auto;
+  }
+
+  svg, svg path {
+    fill: var(--secondary);
+  }
+
+  .h3 {
+    color: var(--secondary);
+    margin: 0;
+    padding-top: 2px;
+  }
+
+  &.active {
+    .h3 {
+      color: var(--primary);
+    }
+
+    svg, svg path {
+      fill: var(--primary);
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+.activeHR {
+  hr {
+    background-color: var(--primary);
+    margin: 0;
+  }
+}
+
+.tabLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabSpacer {
+  width: 1px;
+  height: 1px;
+  text-align: right;
+  margin-left: 6px;
+}
+
+.modelsTabSpacer {
+  width: 1px;
+  height: 1px;
+  text-align: right;
+  margin-left: 8px;
+}
+
+.fittingRoomTabSpacer {
+  width: 1px;
+  height: 1px;
+  text-align: right;
+  margin-left: 8px;
+}
+
+
+
+
+.shirtIcon {
+  fill: var(--secondary);
+  &.active {
+    fill: var(--primary);
+  }
+  transform: scale(0.95);
+}
+
+.peopleIcon {
+  fill: var(--secondary);
+  &.active {
+    fill: var(--primary);
+  }
+  transform: scale(1.25);
+}
+
+.fittingRoomIcon {
+  fill: var(--secondary);
+  &.active {
+    fill: var(--primary);
+  }
+  transform: scale(0.9);
+}
+
+.tabContainer {
+  margin-top: 0px;
+  .tabElement {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.navLink {
+  color: var(--secondary);
+  // color: white;
+
+  &.active {
+    color: var(--primary);
+    // svg, svg path {
+    //   fill: var(--primary);
+    // }
+  }
+}
+
+.fittingRoomTabContents {
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+
+  .spacer {
+    width: 8px;
+    height: 2px;
+  }
+
+  .iconContainer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .counterBadge {
+      position: absolute;
+      margin-left: 20px;
+      // margin-bottom: ;
+      top: 73px;
+      // left: 0px;
+      background-color: var(--primary);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+  
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  
+      .counterBadgeText {
+        color: white;
+        font-size: 14px;
+        margin-bottom: 2px;
+        margin-left: 1px;
+      }
+    }
+  }
+}

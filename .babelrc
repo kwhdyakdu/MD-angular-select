@@ -1,0 +1,19 @@
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "client": "./src/client",
+          "pages": "./src/pages",
+          "server": "./src/server",
+          "types": "./src/types",
+          "utils": "./src/utils"
+        }
+      }
+    ]
+  ]
+}

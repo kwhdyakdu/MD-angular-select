@@ -1,0 +1,6 @@
+**/node_modules
+_templates
+.vscode
+build
+dist
+.next

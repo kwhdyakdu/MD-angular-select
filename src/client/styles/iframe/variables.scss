@@ -1,0 +1,23 @@
+
+$blue: #3675e3;
+$dark: #252525;;
+$black: #000;
+$alt-black: #272727;
+$light-blue: #eaf1ff;
+$light: #f7f7f8;
+$yellow: #ffd600;
+$light-grey: #828282;
+$error-red: #f44f44;
+
+// primary and secondary are css variables: color: var(--primary);
+
+// Breakpoints
+$breakpoint-lg: 1200px;
+$breakpoint-md: 992px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 576px;
+$content-max-width: 1280px;
+
+// Edge Case Breakpoints
+$breakpoint-column-collapse: 870px;
+$content-max-width-width-padding: 1520px;
